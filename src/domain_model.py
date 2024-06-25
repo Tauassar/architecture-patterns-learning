@@ -1,18 +1,20 @@
 import dataclasses
 from datetime import date
 
+from types import Quantity, Reference, Sku
+
 
 @dataclasses.dataclass(frozen=True)
 class OrderLine:
-    order_id: str
-    sku: str
-    qty: int
+    order_id: Reference
+    sku: Sku
+    qty: Quantity
 
 
 class Batch:
     _allocations: set[OrderLine]
 
-    def __init__(self, ref: str, sku: str, qty: int, eta: date | None) -> None:
+    def __init__(self, ref: Reference, sku: Sku, qty: Quantity, eta: date | None) -> None:
         self.reference = ref
         self.sku = sku
         self._purchased_quantity = qty
