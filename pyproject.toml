@@ -1,3 +1,5 @@
+[tool.pytest.ini_options]
+
 [tool.poetry]
 name = "architecture-patterns-learning"
 version = "0.1.0"
@@ -7,8 +9,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-pytest = "^8.2.2"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.2"
 
 [build-system]
 requires = ["poetry-core"]
