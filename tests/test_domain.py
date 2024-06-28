@@ -4,7 +4,7 @@ from datetime import date, timedelta
 
 from src.exceptions import OutOfStock
 from src.domain import Batch, OrderLine, allocate
-from src.types import Reference, Sku, Quantity
+from src.custom_types import Reference, Sku, Quantity
 
 
 today = date.today()
